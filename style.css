@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+.box {
+  position: absolute;
+  top: 1px;
+  width: 312px;
+  height: 900px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffefba, #ffffff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  overflow-y: auto; /* Add this for vertical scrolling */
+  max-height: 95vh; /* Limits the height of the sidebar */
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.box-header i {
+  font-size: 24px;
+  color: #ff4500;
+  margin-right: 10px;
+}
+
+.box-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.box-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px; /* Space between input groups */
+}
+
+.input-group {
+  flex: 1 1 calc(50% - 15px); /* Two boxes per line */
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff4500;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+select,
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+select:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ff4500;
+}
+
+#submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fb8154;
+  color: #fff;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #e03e00;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    flex: 1 1 100%; /* Make inputs full width on smaller screens */
+  }
+  .box {
+    width: 90%; /* Reduce width for smaller screens */
+    height: auto;
+  }
+}
