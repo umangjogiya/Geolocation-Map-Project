@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geolocation Map App</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+  <div id="map"></div>
+  <div class="box">
+    <div class="box-header">
+      <i class="fa-solid fa-location-dot"></i>
+      <h2>Geolocation Map</h2>
+    </div>
+
+    <div id="location-list">
+      <label for="mode-select">Mode:</label>
+      <select id="mode-select">
+        <option value="" disabled selected>--- Select the Mode ---</option>
+        <option value="cycling">Cycling</option>
+        <option value="running">Running</option>
+      </select>
+    </div>
+
+    <div id="location-details" class="box-details" style="display: none;">
+      <div class="input-group">
+        <label for="speed-input">Speed:</label>
+        <input type="text" id="speed-input" placeholder="Enter Speed">
+      </div>
+      <div class="input-group">
+        <label for="distance-input">Distance:</label>
+        <input type="text" id="distance-input" placeholder="Enter Distance">
+      </div>
+      <div class="input-group">
+        <label for="time-input">Time:</label>
+        <input type="text" id="time-input" placeholder="Enter Time">
+      </div>
+      <div class="input-group">
+        <label for="pace-input">Pace:</label>
+        <input type="text" id="pace-input" placeholder="Enter Pace">
+      </div>
+      <!-- Submit Button -->
+      <button id="submit-button">Submit</button>
+    </div>
+
+    <div id="saved-data">
+      <h3>Saved Data</h3>
+      <div id="saved-activities"></div>
+    </div>
+  </div>
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
